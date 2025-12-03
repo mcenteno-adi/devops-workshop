@@ -1,0 +1,13 @@
+# This manifest defines a single Pod running an NGINX container
+apiVersion: v1  # Specifies the API version to use for this resource
+kind: Pod       # Indicates that this resource is a Pod
+metadata:
+  name: nginx-pod  # The name of the Pod
+  labels:
+    app: nginx     # Labels help identify and group resources
+spec:
+  containers:
+    - name: nginx          # Name of the container inside the Pod
+      image: nginx:latest  # The container image to run
+      ports:
+        - containerPort: 80  # Port exposed by the container

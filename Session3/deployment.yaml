@@ -1,0 +1,20 @@
+# This manifest defines a Deployment to manage multiple replicas of NGINX Pods
+apiVersion: apps/v1  # API version for Deployment resources
+kind: Deployment     # Indicates that this resource is a Deployment
+metadata:
+  name: nginx-deployment  # The name of the Deployment
+spec:
+  replicas: 3  # Number of Pod replicas to maintain
+  selector:
+    matchLabels:
+      app: nginx  # Selector to match Pods with this label
+  template:
+    metadata:
+      labels:
+        app: nginx  # Labels applied to Pods created by this Deployment
+    spec:
+      containers:
+        - name: nginx          # Name of the container
+          image: nginx:latest  # Container image
+          ports:
+            - containerPort: 80  # Port exposed by the container
