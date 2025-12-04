@@ -17,7 +17,7 @@ kubectl get pods
 
 ### Run a Pod
 ```bash
-kubectl run nginx --image nginx
+kubectl run nginx --image nginx --port 80
 ```
 
 ### Pod Debugging
