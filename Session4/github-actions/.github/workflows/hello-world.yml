@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Say Hello
-        run: echo "Hello from GitHub Actions, this is me ur user, another change!"
+        run: echo "Hello from GitHub Actions, this is me ur user, another change and another one!"
 
       - name: Print Environment
         run: |
